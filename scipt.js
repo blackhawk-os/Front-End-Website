@@ -9,11 +9,17 @@ function Search_btn(){
 
 
 var swiper = new Swiper(".mySwiper", {
-    pagination: {
-      el: ".swiper-pagination",
-      dynamicBullets: true,
-    },
-  });
+  cssMode: true,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  pagination: {
+    el: ".swiper-pagination",
+  },
+  mousewheel: true,
+  keyboard: true,
+});
 
 
   let menu_bar=document.getElementById("menu");
@@ -23,7 +29,7 @@ var swiper = new Swiper(".mySwiper", {
 
                   if(menu_bar.style.height==="0px"){
 
-                                  menu_bar.style.height="220px"
+                                  menu_bar.style.height="170px"
 
 
                   }else{

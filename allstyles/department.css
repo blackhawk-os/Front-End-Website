@@ -48,7 +48,7 @@
 /* hover effects and background color  */
 
 .category>.container>.col:nth-child(1) {
-    background-color: rgb(255, 202, 150);
+    background-color: rgb(204, 181, 157);
   }
   
   .category>.container>.col:nth-child(2) {
@@ -93,10 +93,12 @@
 
 .category>.container>.col>.link>a:hover {
     color: black;
+    font-weight: 600;
+    transition: 0.30s;
   }
 
   .category>.container>.col:nth-child(1):hover {
-    box-shadow: 0px 0px 10px rgb(255, 202, 156);
+    box-shadow: 0px 0px 10px rgb(204, 181, 157);
     transition: .77s;
     cursor: pointer;
   }

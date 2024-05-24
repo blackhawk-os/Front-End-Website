@@ -11,7 +11,7 @@
 /* header  */
 header{
     width: 100%;
-    height: 80px;
+    height: 90px;
     background-color: white;
     display: flex;
     position: fixed;
@@ -25,12 +25,12 @@ header{
 
 /* Logo  */
 header > .logo{
-width: 120px;
+width: 130px;
 height: 100%;
 overflow:hidden;
 }
 
-header > .logo > img{
+header > .logo > a > img{
     width: 100%;
     height: 100%
 }
@@ -114,7 +114,7 @@ nav>form>button{
 .hero {
     width: 100%;
     height: 800px;
-    background-color: rgb(214, 73, 73);
+    background: url(https://static.vecteezy.com/system/resources/thumbnails/023/189/881/small_2x/ai-generated-ai-generative-abstract-music-sound-audio-pattern-background-with-music-instruments-graphic-art-photo.jpg);
     display: flex;
   }
   .swiper {
@@ -139,9 +139,16 @@ nav>form>button{
   }
   
   .swiper-slide>.content {
-    width: 400px;
+    width: 410px;
     height: 400px;
     text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 10px;
+    backdrop-filter: blur(5px);
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
   }
   
   .swiper-slide>.content>h2 {
@@ -149,6 +156,7 @@ nav>form>button{
     font-weight: 800;
     margin-bottom: 10px;
     margin-top: 30px;
+    color: #ffffff;
   }
   
   .swiper-slide>.content>p {
@@ -156,15 +164,16 @@ nav>form>button{
     font-size: 18px;
     display: flex;
     justify-content: center;
+    color: #ffffff;
   }
   
   .swiper-slide>.content>.show_now {
-    margin-top: 50px;
+    margin-top: 40px;
   }
   
   
   .swiper-slide>.content>.show_now>a {
-  
+    border-radius: 5px;
     padding: 10px 30px;
     color: white;
     background-color: rgb(168, 173, 123);
@@ -173,8 +182,8 @@ nav>form>button{
   .swiper-slide>.content>.show_now>a:hover{
     color:black;
     font-size: 20px;
-    font-weight: 900;
-    transition: 0.10s;
+    font-weight: 700;
+    transition: 0.60s;
   }
   
   .swiper-slide>.img {
@@ -195,6 +204,7 @@ nav>form>button{
     width: 100%;
     height: auto;
     padding: 30px 200px;
+    margin: 50px 0px;
   }
   
 .category>h2 {
@@ -241,7 +251,7 @@ nav>form>button{
 /* hover effects and background color  */
 
 .category>.container>.col:nth-child(1) {
-    background-color: rgb(255, 202, 150);
+    background-color: rgb(204, 181, 157);
   }
   
   .category>.container>.col:nth-child(2) {
@@ -277,6 +287,8 @@ nav>form>button{
 
 .category>.container>.col>.link>a:hover {
     color: black;
+    font-weight: 600;
+    transition: 0.30s;
   }
 
   .category>.container>.col:nth-child(1):hover {
@@ -359,7 +371,6 @@ nav>form>button{
     margin: 30px;
     box-shadow: 0px 0px 2px black;
     overflow: hidden;
-    border-radius: 5px;
     background-color:rgb(221, 228, 194);
   }
 
@@ -402,10 +413,10 @@ nav>form>button{
 }
   
 .trend>.container>.col>.content>.link>a:hover{
-    color:rgb(74, 29, 156);
+    color:rgb(54, 47, 68);
     font-size: 20px;
-    font-weight: 900;
-    transition: 0.10s;
+    font-weight: 800;
+    transition: 0.30s;
   }
 
   /* Gallery Section*/
@@ -435,19 +446,80 @@ nav>form>button{
     justify-content: center;
   }
   .deal>.container>.col {
-    width: 550px;
-    height: 500px;
+    width: 575px;
+    height: 520px;
     overflow: hidden;
     position: relative;
     box-shadow: 0px 0px 2px black;
     margin: 10px;
-    border-radius: 10px;
+    border-radius: 5px;
   }
   
   .deal>.container>.col>img {
     width: 100%;
     height: 100%;
   }
+
+
+
+  /* marquee section  */
+  .logos{
+    overflow: hidden;
+    padding: 60px 0;
+    white-space: nowrap;
+    margin-top: 30px;
+    position: relative;
+  }
+
+  .logos:before, .logos:after{
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    z-index: 2;
+  }
+  .logos:before{
+    left: 0;
+    background: linear-gradient(to left, rgba(255,255,255,0), white);
+  }
+  .logos:after{
+    right: 0;
+    background: linear-gradient(to right, rgba(255,255,255,0), white);
+  }
+
+  .logos:hover .logos-slide{
+    animation-play-state: paused;
+  }
+
+  .logos>h2 {
+    font-size: 50px;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+
+  .logos-slide{
+    display: inline-block;
+    animation: 15s slide infinite linear;
+  }
+  .logos-slide img{
+    height: 50px;
+    margin: 0 40px;
+
+  }
+  @keyframes slide{
+    from{
+      transform:translateX(0);
+    }
+    to{
+      transform:translateX(-100%);
+    }
+  }
+    
+  
+
 
   /* banner section  */
 .banner {
@@ -461,7 +533,7 @@ nav>form>button{
   width: 100%;
   height: 100%;
   position: relative;
-  border: 2px solid rgb(53, 52, 49);
+  border: 2px solid rgb(255, 254, 252);
   overflow: hidden;
 }
 
@@ -472,8 +544,9 @@ nav>form>button{
 
 .banner>.container>.content {
   position: absolute;
-  bottom: 10%;
-  left: 10%;
+  bottom: 4%;
+  left: 8%;
+  backdrop-filter: blur(3px);
 }
 
 
@@ -481,36 +554,35 @@ nav>form>button{
   font-size: 30px;
   font-weight: 700;
   margin-bottom: 10px;
-  color: rgb(0, 0, 0);
+  color: black;
 }
 
 .banner>.container>.content>p {
   margin-bottom: 10px;
   font-weight: 500;
-  color: rgb(0, 0, 0);
+  color: black;
 }
 
-.banner>.container>.content>form>input {
-  width: 500px;
-  height: 40px;
-  border-radius: 5px;
-  border-right: none;
-  padding: 0px 15px;
+.banner>.container>.content>.banner_input{
+  display: flex;
+  align-items: center;
 }
-
-.banner>.container>.content>form>button {
+.banner>.container>.content>.banner_input>button {
   width: 100px;
   height: 40px;
   font-size: 20px;
   background-color: orange;
   border-left: none;
   color: white;
-  border-radius: 5px;
+  border: 1px solid black ;
+  border-radius: 1px;
 }
 
-.banner>.container>.content>form>button:hover {
+.banner>.container>.content>.banner_input>button:hover {
   background-color: rgb(214, 73, 73);
   color: black;
+  font-size: 13px;
+  font-weight: 500;
   transition: .77s;
 }
 
@@ -724,11 +796,11 @@ header>nav {
   height: 0px;
   position: absolute;
   left: 0px;
-  top: 80px;
+  top: 90px;
   display: flex;
   flex-direction: column;
   background-color: white;
-  border-bottom: 3px solid orange;
+  
   overflow: hidden;
   transition: .77s;
 }
@@ -737,7 +809,10 @@ header>nav>a {
   margin-top: 10px;
   margin-left: 20px;
 }
-
+header>nav>a:hover{
+  color: orange;
+  transition: 0.77s;
+}
 ._icon {
   display: none;
 }
@@ -746,6 +821,19 @@ header > nav > form {
   display: flex;
   margin-left: 20px;
   margin-top: 10px;
+}
+header > nav > form > input{
+  border: 2px solid orange;
+  border-radius: 3px;
+}
+header > nav > form > button{
+  border-radius: 3px;
+}
+
+header > nav > form > button:hover{
+  background-color: rgb(214, 73, 73);
+  color: white;
+  transition: 0.77s;
 }
 /*hero section settings*/
 .hero{
@@ -811,24 +899,30 @@ header > nav > form {
 
 /*banner section*/
 .banner>.container>.content>h2{
-  display: none;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 0px;
 }
 .banner>.container>.content>p{
   margin-bottom: 0px;
-  color: orange;
   font-size: 15px;
   }
-  .banner>.container>.content>form>input {
+  .banner>.container>.content>input {
   width: 300px;
   height: 30px;
   border-radius: 5px;
   border-right: none;
   }
-  .banner>.container>.content>form>button {
-    width: 80px;
-    height: 30px;
-    font-size: 18px;
-    background-color: orange;
+  .banner>.container>.content>.banner_input>button {
+    width:  60px;
+    height: 28px;
+    margin-top: 5px;
+    font-size: 12px;
+    background-color:orange;
+    border: 1px solid rgb(214, 73, 73);
+  }
+  .banner>.container>.content>.banner_input>button:hover{
+    font-size: 10px;
   }
 
   /* Gallery Section*/

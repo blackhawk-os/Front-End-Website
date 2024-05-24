@@ -23,13 +23,13 @@
 
 .shop>.container>.col {
     width: 275px;
-    height: 480px;
-    padding: 0px 20px;
+    height: 510px;
+    padding: 15px 20px;
     margin: 30px;
     box-shadow: 0px 0px 2px black;
     overflow: hidden;
-    border-radius: 5px;
-    background-color:rgb(255, 202, 150);;
+    border-radius: none;
+    background-color:rgb(211, 191, 171);;
   }
 
   .shop>.container>.col>.img {
@@ -72,8 +72,21 @@
 }
   
 .shop>.container>.col>.content>.link>a:hover{
-    color:rgb(100, 58, 177);
-    font-size: 20px;
-    font-weight: 900;
-    transition: 0.10s;
+  color:rgb(54, 47, 68);
+  font-size: 20px;
+  font-weight: 800;
+  transition: 0.30s;
   }
+
+  @media only screen and (max-width: 810px) {
+
+    .shop>h2{
+      font-size: 55px;
+      font-weight: 600;
+      margin-left: 0px;
+      display: flex;
+      justify-content: center;
+      text-align: center;
+    }
+  }
+      

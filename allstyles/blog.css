@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
 .blog {
     width: 100%;
     height: auto;
@@ -18,22 +20,21 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-  
     margin-top: 70px;
   }
   
   .blog>.container>.col {
     width: 600px;
-    height: 430px;
-    padding: 20px 30px;
-    margin-top: auto;
-    margin-bottom: 10px;
+    height: 550px;
+    margin: 20px;
+    border: 2px solid transparent;
   }
   
   .blog>.container>.col>.img {
     width: 100%;
-    height: 250px;
+    height: 300px;
     overflow: hidden;
+    border-radius: 7px;
   }
   
   .blog>.container>.col>.img>img {
@@ -43,10 +44,12 @@
   
   
   .blog>.container>.col>.content>h3 {
-    margin-top: 10px;
-    font-size: 35px;
-    font-weight: 700;
+    margin-top: 30px;
+    font-size: 25px;
+    font-weight: 600;
+    font-family: Roboto;
   }
+
   
   .blog>.container>.col>.content>p {
     margin-top: 10px;
@@ -55,6 +58,12 @@
   
   .blog>.container>.col>.content>.link>a {
     color: orange;
-    font-size: 25px;
+    font-size: 22px;
   }
 
+  .blog>.container>.col>.content>.link>a:hover {
+    color: #000;
+    font-weight: 600;
+    transition: ease-in;
+    transition-duration: 0.30s;
+  }
