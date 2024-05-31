@@ -773,7 +773,7 @@ footer>.col>.site>a:hover{
 
 
 /*mobile screen*/
-@media only screen and (max-width: 810px) {
+@media only screen and (max-width: 1075px) {
   section>h2{
     margin-left: 50px;
   }
