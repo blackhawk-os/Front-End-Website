@@ -44,6 +44,7 @@
   
   
   .blog>.container>.col>.content>h3 {
+    height: 60px;
     margin-top: 30px;
     font-size: 25px;
     font-weight: 600;
@@ -52,6 +53,7 @@
 
   
   .blog>.container>.col>.content>p {
+    height: 95px;
     margin-top: 10px;
     margin-bottom: 10px;
   }
