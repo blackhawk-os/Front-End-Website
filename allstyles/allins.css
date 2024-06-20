@@ -46,19 +46,23 @@
 
   .shop>.container>.col>.content {
   margin-top: 25px;
+  height: 200px;
 }
 
 .shop>.container>.col>.content>h3 {
   font-size: 20px;
+  height: 45px;
 }
 
 
 .shop>.container>.col>.content>p {
   margin-top: 5px;
+  height: 95px;
 }
 
 .shop>.container>.col>.content>.price{
     font-weight: 600;
+    height: 20px;
 }
 
 .shop>.container>.col>.content>.link {
