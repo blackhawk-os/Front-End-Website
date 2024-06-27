@@ -216,20 +216,6 @@ nav>form>button{
     padding: 30px 100px;
     margin: 50px 0px;
   }
-
-   /* adjusting the number of boxes   */
-  @media only screen and (max-width: 1800px) and (min-width: 1400px) {
-
-      .category {
-        width: 100%;
-        height: auto;
-        padding: 0;
-        margin: 50px 0px;
-      }
-      .category>.container>.col {
-        margin: 50px 25px;
-      }
-  }
   
 .category>h2 {
     font-size: 55px;
@@ -877,6 +863,7 @@ nav>form>button{
   .trend{
     height: auto;
     padding: 0%;
+    margin-top: 60px;
   }
   .trend>h2{
     margin: 0px;
