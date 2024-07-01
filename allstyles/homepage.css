@@ -120,6 +120,9 @@ nav>form>button{
 #menu_bar{
   font-size: 25px;
 }
+.mobile-search-bar{
+  border: 2px solid black;
+}
 /* hero section  */
 .hero {
     width: 100%;
@@ -500,7 +503,7 @@ nav>form>button{
     /* banner section  */
     .banner {
       width: 100%;
-      height: 400px;
+      height: 100%;
       margin-top: 100px;
     }
     
@@ -517,9 +520,14 @@ nav>form>button{
     }
     
     .banner>.container>.content {
+      height: 150px;
+      width: 100%;
       position: absolute;
-      bottom: 35%;
-      left: 34%;
+      display: flex;
+      flex-direction: column;
+      top: 90%;
+      left: 50%;
+      transform: translate(-50%, -50%);
     }
     
     
@@ -527,10 +535,10 @@ nav>form>button{
       display: flex;
       justify-content: center;
       align-items: center;
-      font-size: 30px;
+      font-size: 20px;
       font-weight: 700;
       margin-bottom: 10px;
-      color: black;
+      color: rgb(255, 255, 255);
     }
     
     .banner>.container>.content>h1 {
@@ -538,8 +546,9 @@ nav>form>button{
       justify-content: center;
       align-items: center;
       margin-bottom: 10px;
-      font-weight: 600;
-      color: black;
+      font-size: 20px;
+      font-weight: 500;
+      color: rgb(255, 255, 255);
     }
     
     .banner>.container>.content>.banner_input{
@@ -558,11 +567,19 @@ nav>form>button{
       border: none;
       border-radius: 5px;
     }
-    
+
     .banner>.container>.content>.banner_input>button:hover {
       background-color: rgb(214, 73, 73);
       transition: .77s;
     }
+
+    .banner>.container>.content>.banner_input>button:hover:before {
+      transform: translateX(0);
+    }
+
+
+  /*Action Banners */
+  
 
   /* footer section  */
   footer {
@@ -874,35 +891,6 @@ nav>form>button{
     justify-content: center;
   }
 
-
-  /*banner section*/
-  .banner>.container>.content>h2{
-    font-size: 20px;
-    font-weight: 600;
-    margin-bottom: 0px;
-  }
-  .banner>.container>.content>p{
-    margin-bottom: 0px;
-    font-size: 15px;
-    }
-    .banner>.container>.content>input {
-    width: 300px;
-    height: 30px;
-    border-radius: 5px;
-    border-right: none;
-    }
-    .banner>.container>.content>.banner_input>button {
-      width:  60px;
-      height: 28px;
-      margin-top: 5px;
-      font-size: 12px;
-      background-color:orange;
-      border: 1px solid rgb(214, 73, 73);
-    }
-    .banner>.container>.content>.banner_input>button:hover{
-      font-size: 10px;
-    }
-
     /* Gallery Section*/
     .deal {
       width: 100%;
@@ -943,6 +931,35 @@ nav>form>button{
       width: 100%;
       height: 100%;
     }    
+
+    /*banner section*/
+  .banner>.container>.content>h2{
+    font-size: 20px;
+    margin-bottom: 5px;
+  }
+  .banner>.container>.content>h1{
+    margin-bottom: 5px;
+    font-weight: 500;
+    font-size: 20px;
+    }
+    .banner>.container>.content>input {
+    width: 300px;
+    height: 30px;
+    border-radius: 5px;
+    border-right: none;
+    }
+    .banner>.container>.content>.banner_input>button {
+      width: 100px;
+      height: 35px;
+      font-size: 15px;
+      background-color: rgb(113, 112, 110);
+      border-left: none;
+      color: white;
+      border: none;
+      border-radius: 5px;
+    }
+
+
 
     /* blg section  */
   .blog{
